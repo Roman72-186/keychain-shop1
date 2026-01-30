@@ -1,0 +1,28 @@
+{
+  "version": 2,
+  "rewrites": [
+    {
+      "source": "/api/webhook",
+      "destination": "https://rb786743.leadteh.ru/inner_webhook/4228d48d-9a90-40aa-b249-664e73405c4a"
+    }
+  ],
+  "headers": [
+    {
+      "source": "/(.*)",
+      "headers": [
+        {
+          "key": "X-Content-Type-Options",
+          "value": "nosniff"
+        },
+        {
+          "key": "X-Frame-Options",
+          "value": "DENY"
+        },
+        {
+          "key": "X-XSS-Protection",
+          "value": "1; mode=block"
+        }
+      ]
+    }
+  ]
+}

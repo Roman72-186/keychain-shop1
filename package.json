@@ -1,0 +1,44 @@
+{
+  "name": "keychain-shop-miniapp",
+  "version": "1.0.0",
+  "description": "Telegram Mini App магазин с интеграцией LEADTEX CRM",
+  "main": "index.html",
+  "scripts": {
+    "dev": "npx http-server -p 3000 -o",
+    "build": "echo 'No build step required - static site'",
+    "deploy": "vercel --prod",
+    "test": "jest",
+    "test:watch": "jest --watch",
+    "test:coverage": "jest --coverage"
+  },
+  "keywords": [
+    "telegram",
+    "mini-app",
+    "shop",
+    "leadtex",
+    "e-commerce"
+  ],
+  "author": "",
+  "license": "MIT",
+  "devDependencies": {
+    "http-server": "^14.1.1",
+    "jest": "^29.7.0",
+    "jest-environment-jsdom": "^29.7.0"
+  },
+  "jest": {
+    "testEnvironment": "jsdom",
+    "testMatch": [
+      "**/tests/**/*.test.js"
+    ],
+    "collectCoverageFrom": [
+      "js/**/*.js",
+      "!js/telegram.js"
+    ],
+    "coverageDirectory": "coverage",
+    "coverageReporters": [
+      "text",
+      "html"
+    ],
+    "verbose": true
+  }
+}
